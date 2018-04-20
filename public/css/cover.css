@@ -108,3 +108,13 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+    color: #8bacff;
+  }
+}
+.modal-content {
+  background-color: #ffffff;
+}

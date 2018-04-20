@@ -11,11 +11,128 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Bootstrap font CSS -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/css/cover.css" rel="stylesheet">
 </head>
-
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <i class="icon-spinner icon-spin icon-large icon-4x" id="loading"></i>
+        <div class="modal-content" style="display: none;">
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">店铺信息</h4>
+            </div>
+            <div class="modal-body text-left">
+                <h5>基本信息</h5>
+                <div class="row"><div class="col-6">年龄</div><div class="col-6" id="age"></div></div>
+                <div class="row"><div class="col-6">所在地区</div><div class="col-6" id="location">.col-6</div></div>
+                <div class="row"><div class="col-6">当前主营</div><div class="col-6" id="domain">.col-6</div></div>
+                <div class="row"><div class="col-6">提供服务</div><div class="col-6" id="services">.col-6</div></div>
+                <div class="mt-2"></div>
+                <h5>宝贝与描述相符</h5>
+                <p>平均分：<i id="avg_score_0"></i> 参与人数<i id="total_actor_0"></i></p>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                    </div>
+                    <div class="col-6" id="0_0"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="0_1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="0_2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="0_3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="0_4"></div>
+                </div>
+                <div class="mt-2"></div>
+                <h5>卖家的服务态度</h5>
+                <p>平均分：<i id="avg_score_1"></i> 参与人数<i id="total_actor_1"></i></p>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                    </div>
+                    <div class="col-6" id="1_1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="1_2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="1_3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="1_4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="1_0"></div>
+                </div>
+                <div class="mt-2"></div>
+                <h5>物流服务的质量</h5>
+                <p>平均分：<i id="avg_score_2"></i> 参与人数<i id="total_actor_2"></i></p>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                    </div>
+                    <div class="col-6" id="2_0"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="2_1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="2_2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="2_3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                    <div class="col-6" id="2_4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <body class="text-center">
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
@@ -23,11 +140,13 @@
     <main role="main" class="inner cover">
         <h1 class="cover-heading">Have a try</h1>
         <p class="lead">Whatever you should be doing right now , go fucking do it.</p>
-        <input type="text" name="tmall_name" class="form-control" placeholder="Store Name" required autofocus>
+        <input type="text" name="tmall_name" class="form-control" placeholder="西门子" required autofocus>
         <p class="lead mt-2">
-            <a href="javascript:;" id="check" class="btn btn-secondary">Learn more</a>
+            <a href="javascript:;" id="check" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Learn more</a>
         </p>
     </main>
+    <!-- 模态框 -->
+
     <footer class="mastfoot mt-auto">
         <div class="inner">
             <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -46,6 +165,9 @@
 <script>
     $('#check').click(function () {
         var name = $('input[name="tmall_name"]').val();
+        if(name == ''){
+            return;
+        }
         get_info(name)
     })
 
@@ -57,6 +179,25 @@
             type: 'POST',
             dataType: 'JSON',
             success: function (json) {
+                $('#age').text(json.age);
+                $('#location').text(json.location)
+                $('#domain').text(json.domain)
+                $('#services').text(json.services.join(','));
+                for(var i in json.scores_detail){
+                    $('#avg_score_' + i).text(json.scores_detail[i].score);
+                    $('#total_actor_' + i).text(json.scores_detail[i].actor);
+                    var tbody = "";
+                    for(var a in json.scores_detail[i].detail){
+                        console.log('#'+i+'_'+a);
+                        $('#'+i+'_'+a).text(json.scores_detail[i].detail[a].percent)
+                    }
+                    $('#score_detail_'+ i).html(tbody);
+                }
+                $('#loading').hide();
+                $('.modal-content').show();
+            },
+            beforeSend:function () {
+                
             }
         })
     }
